@@ -7,6 +7,23 @@
   <title>Async</title>
 </head>
 <body>
+  <div class="xhr-container">
+    <button id="button">Get Data</button>
+    <br><br>
+    <div id="xhr-output"></div>
+  </div>
   
+  <script src="app.js"></script>
+  <!-- <script>
+    var xhr = new XMLHttpRequest()
+    xhr.open('get', 'xhrData.txt')
+    xhr.send()
+    xhr.onload = function() {
+      var responseText = xhr.responseText
+      console.log(responseText)
+      var str = '<h2>' + responseText + '</h2>'
+      document.body.innerHTML += str
+    }
+  </script> -->
 </body>
 </html>
