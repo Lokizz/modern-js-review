@@ -6,8 +6,6 @@ let min = 1,
     winningNum = getRandomNum(min, max),
     guessesLeft = 3;
 
-console.log(winningNum);
-
 // UI Elements
 const game = document.getElementById('game'),
       minNum = document.querySelector('.min-num'),

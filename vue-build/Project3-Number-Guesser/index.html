@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Skeleton CSS Framework -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Project3 - Number Guesser</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Number Guesser</h1>
+    <div id="game">
+      <p>
+        从 
+        <span class="min-num">{{ minNum }}</span> 到 
+        <span class="max-num">{{ maxNum }}</span> 之间猜一个数字。
+        <br>
+        <span style="font-size: .5em; color: #ccc; user-select: none; margin-left: -1.2em;">（提示：可以从开发者工具直接看见正确答案）</span>
+      </p>
+      <input 
+        v-model="guessNum" 
+        type="number" 
+        id="guess-input" 
+        placeholder="Enter your guess..." 
+      />
+      <input 
+        @click="validateGuessNum(guessNum)" 
+        :class="{ 'play-again': isPlayAgainEnabled }" 
+        :style="btnStyle" 
+        :value="btnValue" 
+        type="submit" 
+        id="guess-btn" 
+      />
+      <p :style="msgStyle">{{ message }}</p>
+    </div>
+  </div>
+  
+  <!-- ? 加载 Vue  -->
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+</body>
+</html>
