@@ -39,9 +39,9 @@ const game = {
   methods: {
     // ? 初始化数字
     initNum() {
-      // 随机生成 0-5
+      // 随机生成 1-5
       this.minNum = Math.floor(Math.random() * 5) + 1
-      // 随机生成 10-20
+      // 随机生成 11-20
       this.maxNum = Math.floor(Math.random() * 10) + 11
 
       this.winNum = Math.floor(Math.random() * (this.maxNum - this.minNum + 1)) + this.minNum
